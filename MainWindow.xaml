@@ -1,0 +1,23 @@
+﻿<Window x:Class="StateDiagramMVVM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:StateDiagramMVVM"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <vm:Presenter/>
+    </Window.DataContext>
+    <Grid>
+        <ListBox Name="Vertices_ListBox"
+                 ItemsSource="{Binding Vertices}"
+            HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox Name="Edges_ListBox"
+                 ItemsSource="{Binding Edges}"
+            HorizontalAlignment="Left" Height="100" Margin="115,10,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox Name="Conditions_ListBox"
+                 ItemsSource="{Binding Conditions}"
+            HorizontalAlignment="Left" Height="100" Margin="220,10,0,0" VerticalAlignment="Top" Width="100"/>
+        <DockPanel Name="Graph_DockPanel"
+            HorizontalAlignment="Left" Height="195" LastChildFill="False" Margin="10,115,0,0" VerticalAlignment="Top" Width="310"/>
+
+    </Grid>
+</Window>
